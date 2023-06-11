@@ -44,5 +44,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"wz2cool_csharp-dynamic-query" /o:"wz2cool-github" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          msbuild .\src\CsharpDynamicQuery\CsharpDynamicQuery.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder:Clean
+          dotnet build .\src\CsharpDynamicQuery\CsharpDynamicQuery.sln -target:NotInSlnfolder:Rebuild;NewFolder\InSolutionFolder:Clean
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
