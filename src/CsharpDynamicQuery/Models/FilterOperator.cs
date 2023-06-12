@@ -16,19 +16,19 @@ namespace CsharpDynamicQuery.Models
         //
         // Summary:
         //     Left operand must be smaller than or equal to the right one
-        LessThanOrEqualTo,
+        LessThanOrEqual,
         //
         // Summary:
         //     Left operand must be equal to the right one
-        EqualTo,
+        Equal,
         //
         // Summary:
         //     Left operand must be different from the right one
-        NotEqualTo,
+        NotEqual,
         //
         // Summary:
         //     Left operand must be larger than the right one
-        GreaterThanOrEqualTo,
+        GreaterThanOrEqual,
         //
         // Summary:
         //     Left operand must be larger than or equal to the right one
@@ -36,18 +36,26 @@ namespace CsharpDynamicQuery.Models
         //
         // Summary:
         //     Left operand must start with the right one
-        StartsWith,
+        StartWith,
         //
         // Summary:
         //     Left operand must end with the right one
-        EndsWith,
+        EndWith,
         //
         // Summary:
         //     Left operand must contain the right one
         Contains,
-        //
-        // Summary:
-        //     Left operand must be contained in the right one
-        IsContainedIn,
+        /// <summary>
+        /// 
+        /// </summary>
+        In,
+        /// <summary>
+        /// 
+        /// </summary>
+        NotIn,
+        /// <summary>
+        /// 
+        /// </summary>
+        Between,
     }
 }
