@@ -44,8 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\FilterDescriptor.cs" />
+    <Compile Include="Models\IFilterDescriptor.cs" />
     <Compile Include="Models\FilterCondition.cs" />
     <Compile Include="Models\FilterOperator.cs" />
+    <Compile Include="Models\ISortDescriptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
