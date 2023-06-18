@@ -9,7 +9,6 @@ namespace CsharpDynamicQuery.Models
     [Serializable]
     public class FilterDescriptor : IEqualityComparer<FilterDescriptor>
     {
-        public bool IsCaseSensitive { get; set; }
         public FilterCondition Condition { get; set; }
         public FilterOperator Operator { get; set; }
         public string PropertyPath { get; set; }
@@ -43,11 +42,10 @@ namespace CsharpDynamicQuery.Models
             bool result = false;
             if (x != null && y != null)
             {
-                result = x.IsCaseSensitive == y.IsCaseSensitive
-                    && x.Condition == y.Condition
-                    && x.Operator == y.Operator
-                    && x.PropertyPath == y.PropertyPath
-                    && x.Value == y.Value;
+                result = x.Condition == y.Condition
+                         && x.Operator == y.Operator
+                         && x.PropertyPath == y.PropertyPath
+                         && x.Value == y.Value;
             }
             return result;
         }
